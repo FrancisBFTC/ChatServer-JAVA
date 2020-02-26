@@ -382,7 +382,11 @@ public class ChatClient extends JFrame{
 	public ChatClient() throws IOException{
 		this.setBounds(200, 200, 250, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setTitle("Chat School");
+		this.setTitle("ChatServer");
+		
+		ImageIcon icon;
+		icon = new ImageIcon(getClass().getResource("/chat/image/iconChat.png"));
+		this.setIconImage(icon.getImage());
 		
 		//Execução multi-tarefa dos servidores
 		new Thread(server1).start();
@@ -626,6 +630,7 @@ public class ChatClient extends JFrame{
 					frameComputers[i].setBounds(100, 100, 490, 390);
 					frameComputers[i].setTitle("Chat - "+computers[i].getText());
 					frameComputers[i].setResizable(false);
+					frameComputers[i].setIconImage(icon.getImage());
 					
 					labelBody[i] = new JLabel();
 					labelBody[i].setText("<html><div style='width:490;height:390;'></div></html>");
@@ -994,6 +999,7 @@ public class ChatClient extends JFrame{
 								frameMsg[n].setTitle("Mensagens");
 								frameMsg[n].setBounds(300, 100, 490, 430);
 								frameMsg[n].setResizable(false);
+								frameMsg[n].setIconImage(icon.getImage());
 								
 								panelMsg[n] = new JLabel();
 								panelMsg[n].setText("<html><div style='background:#aaffff;width:490;height:430;'></div></html>");
@@ -2971,6 +2977,7 @@ public class ChatClient extends JFrame{
 				frameMsg.setTitle("Mensagens");
 				frameMsg.setBounds(300, 100, 490, 430);
 				frameMsg.setResizable(false);
+				frameMsg.setIconImage(icon.getImage());
 				
 				JLabel panelMsg = new JLabel();
 				panelMsg.setText("<html><div style='background:#aaffff;width:490;height:430;'></div></html>");

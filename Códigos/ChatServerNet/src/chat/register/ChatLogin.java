@@ -18,6 +18,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -58,6 +59,10 @@ public class ChatLogin {
 		window.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
 		window.setBounds(200, 200, 500, 400);
 		window.setResizable(false);
+		
+		ImageIcon icon;
+		icon = new ImageIcon(getClass().getResource("/chat/image/iconChat.png"));
+		window.setIconImage(icon.getImage());
 		
 		panel1 = new javax.swing.JLabel();
 		panel1.setText("<html><div style='background:#0000ff;width:500;height:400;'></div></html>");
